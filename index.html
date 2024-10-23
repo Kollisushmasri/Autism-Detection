@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Spectrum Disorder Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Autism Spectrum Disorder Detection</h1>
+        <div class="auth-buttons">
+            <button id="sign-in-button" class="active">Sign In</button>
+            <button id="sign-up-button">Sign Up</button>
+        </div>
+    </header>
+    <div class="menu">
+        <button class="menu-button">☰</button>
+        <div class="menu-content">
+            <a href="#" id="search-autism-centers">Nearby Autism Centers</a>
+            <a href="#">Guidance</a>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Sign In Form -->
+        <div id="sign-in-form" class="auth-form">
+            <h2>Sign In</h2>
+            <input type="text" id="sign-in-username" placeholder="Username" required>
+            <input type="password" id="sign-in-password" placeholder="Password" required>
+            <button id="submit-sign-in">Sign In</button>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="sign-up-form" class="auth-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="sign-up-username" placeholder="Username" required>
+            <input type="password" id="sign-up-password" placeholder="Password" required>
+            <input type="password" id="sign-up-confirm-password" placeholder="Confirm Password" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="relation" required>
+                <option value="" disabled selected>Parent or Child</option>
+                <option value="parent">Parent</option>
+                <option value="child">Child</option>
+            </select>
+            <button id="submit-sign-up">Sign Up</button>
+        </div>
+
+        <!-- Message Display Area -->
+        <div id="message-area" style="margin-top: 20px; color: green;"></div>
+
+        <!-- Upload Form for Autism Prediction -->
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-input" name="image" accept="image/*" required>
+            <button type="submit">Upload and Predict</button>
+        </form>
+
+        <!-- Result Display -->
+        <div id="result" class="result" style="display: none;">
+            <img id="preview" src="" alt="Image Preview" style="display: block; max-width: 100%; height: auto;">
+            <p id="prediction"></p>
+            <p id="probability"></p>
+        </div>
+        
+        <!-- Search for Autism Centers -->
+        <div id="search-container" style="display: none; margin-top: 20px;">
+            <input type="text" id="search-input" placeholder="Enter city (e.g., Vijayawada)">
+            <button id="search-button">Search</button>
+            <div id="centers-list" style="display: none; margin-top: 20px;">
+                <h3>Nearby Autism Centers:</h3>
+                <ul id="centers-ul"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refresh button -->
+    <button id="refresh" class="refresh-button">🔄 Refresh</button>
+
+    <!-- Map Container -->
+    <div id="map-container" style="display:none; width:100%; height:400px;"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu1bKVs7O9WXttO_sIfVcRsAz6D7lDAc4&callback=initMap" async defer></script>
+</body>
+</html>
