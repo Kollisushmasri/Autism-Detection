@@ -18,7 +18,6 @@
         <button class="menu-button">☰</button>
         <div class="menu-content">
             <a href="#" id="search-autism-centers">Nearby Autism Centers</a>
-            <a href="#">Guidance</a>
         </div>
     </div>
     <div class="container">
@@ -71,6 +70,10 @@
         <div id="search-container" style="display: none; margin-top: 20px;">
             <input type="text" id="search-input" placeholder="Enter city (e.g., Vijayawada)">
             <button id="search-button">Search</button>
+            <div id="splitScreen" class="hidden">
+            <div id="mapContainer">
+                <div id="map"></div>
+            </div>
             <div id="centers-list" style="display: none; margin-top: 20px;">
                 <h3>Nearby Autism Centers:</h3>
                 <ul id="centers-ul"></ul>
@@ -87,5 +90,9 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu1bKVs7O9WXttO_sIfVcRsAz6D7lDAc4&callback=initMap" async defer></script>
+     <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Autism Spectrum Disorder Detection. All rights reserved.</p>
+    </footer>
 </body>
 </html>
