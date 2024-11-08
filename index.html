@@ -14,15 +14,13 @@
             <button id="sign-up-button">Sign Up</button>
         </div>
     </header>
-    
     <div class="menu">
         <button class="menu-button">☰</button>
         <div class="menu-content">
             <a href="#" id="search-autism-centers">Nearby Autism Centers</a>
-            <a href="#" id="about-autism">About Autism</a> <!-- New "About Autism" option -->
+            <a href="#">Guidance</a>
         </div>
     </div>
-    
     <div class="container">
         <!-- Sign In Form -->
         <div id="sign-in-form" class="auth-form">
@@ -53,19 +51,9 @@
             <button id="submit-sign-up">Sign Up</button>
         </div>
 
-        <!-- About Autism Section -->
-        <div id="about-autism-section" style="display: none; margin-top: 20px;">
-            <h2>About Autism Spectrum Disorder (ASD)</h2>
-            <p>Autism Spectrum Disorder (ASD) is a developmental disorder that affects communication, behavior, and social interactions. Individuals with ASD may have unique strengths and challenges, and they often experience sensory sensitivities. Early diagnosis and support can greatly improve the quality of life for individuals with ASD.</p>
-            <p>Symptoms of ASD vary widely but often include difficulties with social interactions, repetitive behaviors, and specific interests. With a spectrum of traits and characteristics, ASD is unique to each individual, making personalized support essential.</p>
-            <p>
-            <p>For more information, visit:
-            <ul>
-                <li><a href="https://www.cdc.gov/autism/about/index.html" target="_blank">CDC - Autism Information</a></li>
-                <li><a href="https://www.webmd.com/brain/autism/understanding-autism-basics" target="_blank">WebMD - Understanding Autism Basics</a></li>
-            </ul>
-        </p>
-    </div>
+        <!-- Message Display Area -->
+        <div id="message-area" style="margin-top: 20px; color: green;"></div>
+
         <!-- Upload Form for Autism Prediction -->
         <form id="upload-form" enctype="multipart/form-data">
             <input type="file" id="file-input" name="image" accept="image/*" required>
@@ -78,37 +66,26 @@
             <p id="prediction"></p>
             <p id="probability"></p>
         </div>
-
+        
         <!-- Search for Autism Centers -->
         <div id="search-container" style="display: none; margin-top: 20px;">
             <input type="text" id="search-input" placeholder="Enter city (e.g., Vijayawada)">
             <button id="search-button">Search</button>
-            <div id="splitScreen" class="hidden">
-                <div id="mapContainer">
-                    <div id="map"></div>
-                </div>
-                <div id="centers-list" style="display: none; margin-top: 20px;">
-                    <h3>Nearby Autism Centers:</h3>
-                    <ul id="centers-ul"></ul>
-                </div>
+            <div id="centers-list" style="display: none; margin-top: 20px;">
+                <h3>Nearby Autism Centers:</h3>
+                <ul id="centers-ul"></ul>
             </div>
         </div>
-
-        <!-- Refresh button -->
-        <button id="refresh" class="refresh-button">🔄 Refresh</button>
-
-        <!-- Map Container -->
-        <div id="map-container" style="display:none; width:100%; height:400px;"></div>
-
     </div>
+
+    <!-- Refresh button -->
+    <button id="refresh" class="refresh-button">🔄 Refresh</button>
+
+    <!-- Map Container -->
+    <div id="map-container" style="display:none; width:100%; height:400px;"></div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu1bKVs7O9WXttO_sIfVcRsAz6D7lDAc4&callback=initMap" async defer></script>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Autism Spectrum Disorder Detection. All rights reserved.</p>
-    </footer>
 </body>
 </html>
